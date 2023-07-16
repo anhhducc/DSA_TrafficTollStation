@@ -36,7 +36,7 @@ int chooseTollGate(TollGate* tollGates, int numGates) {
 int main() {
     const int numTollGates = 4;
     TollGate tollGates[numTollGates];
-
+    cout<<"**********TRAFFIC TOLL STATION MANAGEMENT***********"<<endl;
     // Initialize toll gate information
     for (int i = 0; i < numTollGates; i++) {
         tollGates[i].totalVehicles = 0;
@@ -47,7 +47,8 @@ int main() {
         int vehicleType;
         int vehicleWeight;
 
-        cout << "Enter vehicle type (1 - Small car, 2 - Medium car, 3 - Large car, 4 - Heavy-duty car): ";
+        cout << "Enter vehicle type\n"; 
+        cout<< " 1 - Small car\n 2 - Medium car\n 3 - Large car\n 4 - Heavy-duty car\n ";
         cin >> vehicleType;
 
         if (vehicleType < 1 || vehicleType > 4) {
@@ -119,8 +120,9 @@ int main() {
 
         char continueOption;
         cout << "Continue? (y/n): ";
+        
         cin >> continueOption;
-
+        cout << "===================================" << endl;
         if (continueOption == 'n') {
             break;
         }
